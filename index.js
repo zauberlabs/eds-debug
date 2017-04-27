@@ -78,6 +78,17 @@ app.post('/push/', function (req, res) {
   }
 });
 
+app.post('/push-message/', function (req, res) {
+  res.writeHead(200, { "Content-Type": "application/json" });
+
+  var data = {
+    "count": "30",
+    "message": "hello pushm!"
+  };
+
+  res.end(JSON.stringify(data));
+});
+
 app.get('/poll/', function (req, res) {
   res.writeHead(200, { "Content-Type": "application/json" });
 
